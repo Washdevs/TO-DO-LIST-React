@@ -1,0 +1,121 @@
+.post {
+ background: var(--gray-800);
+ border-radius: 8px;
+ overflow: hidden;
+ color: var(--zinc-100);
+ padding: 2.5rem;
+}
+
+.post + .post {
+ /*para estilizar todo post que contenha um post anterior, no caso é o estilo do post de baixo assim por diante adicionando com +*/
+ background: var(--gray-800);
+ border-radius: 8px;
+ overflow: hidden;
+ color: var(--zinc-100);
+ padding: 2.5rem;
+ margin-top: 2rem;
+}
+
+.content {
+ text-decoration: none;
+ color: var(--zinc-200);
+}
+
+.content p {
+ margin-top: 1rem;
+ line-height: 1rem;
+}
+
+.content a {
+ font-weight: bold;
+ color: var(--green-500);
+ text-decoration: none;
+ transition: color 0.2s, background-color 0.2s;
+}
+
+.content a:hover {
+ color: var(--green-300);
+}
+
+.commentForm {
+ border-top: 1px solid var(--gray-600);
+ margin-top: 1.5rem;
+ padding: 1rem 0rem 0rem;
+ justify-content: start;
+}
+.commentForm > strong {
+ display: block;
+ padding-bottom: 1rem;
+}
+.commentForm textarea {
+ border: 2px solid var(--green-500);
+ border-radius: 8px;
+ width: 100%;
+ height: 5rem;
+ background: var(--gray-900);
+ color: var(--zinc-200);
+ padding: 0.875rem 0.875rem 0rem;
+ resize: none;
+}
+
+.commentForm footer {
+ visibility: hidden;
+ max-height: 0;
+}
+
+.commentForm:focus-within footer {
+ visibility: visible;
+ max-height: none;
+}
+
+.commentForm button[type='submit'] {
+ border: 2px solid var(--green-500);
+ border-radius: 8px;
+ margin: 1rem 0rem 0rem; /*cima, laterais, baixo*/
+ padding: 0.875rem 0.875rem 0.875rem; /*cima, laterais, baixo*/
+ background: var(--green-500);
+ color: var(--white);
+ transition: color 0.2s, background-color 0.2s;
+}
+
+.commentForm button[type='submit']:not(:disabled):hover {
+ background: var(--green-600);
+ color: var(--white);
+}
+
+.commentForm button:disabled {
+ opacity: 0.7;
+ cursor: not-allowed;
+}
+
+.post .head {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+
+.data {
+ color: var(--zinc-400);
+}
+
+.authorInfo {
+ display: flex;
+ flex-direction: column;
+ padding: 0rem 0.875rem 0rem;
+}
+
+.authorInfo span {
+ color: var(--zinc-400);
+ line-height: 1.6;
+ font-size: 0.875rem;
+}
+
+.author {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+
+.commentList {
+ margin-top: 2rem;
+}

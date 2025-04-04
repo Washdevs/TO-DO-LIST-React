@@ -1,0 +1,23 @@
+.header {
+  background: var(--gray-800);
+  display: flex;
+  justify-content: center;
+  padding: 0.25rem 0;
+}
+
+.header img {
+  height: 3.75rem;
+  width: 2rem;
+}
+
+.headertext {
+  background: transparent;
+  border: 1px solid var(--gray-800);
+  padding: 0 0.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  color: var(--zinc-100);
+}

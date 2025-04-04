@@ -1,0 +1,21 @@
+.avatar {
+    box-sizing: initial;
+    width: 4rem;
+    height: 3.5rem;
+    object-fit: cover;
+    display: flex;
+    border-radius: 8px;
+  }
+
+  .avatarWithBorder{ /*Avatar com BORDA*/
+    box-sizing: initial;
+    width: 3.875rem;
+    height: 3.875rem;
+    object-fit: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-self: center;
+    border-radius: 8px;
+    outline: 2px solid var(--green-500);
+    border: 2px solid var(--zinc-950);
+  }
