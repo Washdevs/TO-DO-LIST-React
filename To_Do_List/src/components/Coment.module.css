@@ -9,13 +9,13 @@
 }
 
 .commentContent {
-  background: var(--zinc-700);
+  background: var(--gray-600);
   border-radius: 8px;
   padding: 1rem;
 }
 
 .commentContent p {
-  color: var(--zinc-200);
+  color: var(--gray-200);
   margin-top: 1rem;
 }
 
@@ -29,27 +29,27 @@
   display: block;
   font-size: 1rem;
   line-height: 1.6;
-  color: var(--zinc-100);
+  color: var(--gray-100);
 }
 
 .authorAndTime Time {
   display: block;
   font-size: 0.75rem;
   line-height: 1.6;
-  color: var(--zinc-400);
+  color: var(--gray-400);
 }
 
 .commentContent header button {
   background: transparent;
   border: 0;
-  color: var(--zinc-400);
+  color: var(--gray-400);
   cursor: pointer;
   line-height: 0;
   border-radius: 2px;
 }
 
 .commentContent header button:hover {
-  color: var(--red-700);
+  color: var(--danger);
 }
 
 .commentBox > footer {
@@ -59,7 +59,7 @@
 .commentBox footer button {
   background: transparent;
   border: 0;
-  color: var(--zinc-300);
+  color: var(--gray-300);
   cursor: pointer;
 
   display: flex;
@@ -68,14 +68,15 @@
 }
 
 .commentBox footer button:hover {
-  color: var(--green-300);
+  color: var(--blue);
 }
 
-.commentBox footer button svg{
+.commentBox footer button svg {
   margin-right: 0.5rem;
 }
 
-.commentBox footer button span::before{ /*Before adiciona o elemento dentro do span, que é este estilizado com codigo 2022, este é o conteúdo que foi adicionado*/
+.commentBox footer button span::before {
+  /*Before adiciona o elemento dentro do span, que é este estilizado com codigo 2022, este é o conteúdo que foi adicionado*/
   padding: 0 0.25rem;
-  content: "\2022";
+  content: '\2022';
 }

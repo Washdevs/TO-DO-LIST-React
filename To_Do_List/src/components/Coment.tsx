@@ -1,6 +1,5 @@
 import styles from './Coment.module.css';
 import { ThumbsDown, ThumbsUp, Trash } from '@phosphor-icons/react';
-import { Avatar } from './Avatar';
 import { useState } from 'react';
 
 interface CommentProps {
@@ -30,18 +29,9 @@ export function Coment({ content, onDeleteComment }: CommentProps) {
 
   return (
     <div className={styles.comment}>
-      <Avatar hasBorder={false} src="https://github.com/deyvin.png" alt="" />
       <div className={styles.commentBox}>
         <div className={styles.commentContent}>
           <header>
-            <div className={styles.authorAndTime}>
-              <strong>deyvin</strong>
-              <time title="20 de março" dateTime="2025-03-20 22:25" className={styles.data}>
-                {' '}
-                Cerca de 1h atrás
-              </time>{' '}
-            </div>
-
             <button onClick={handleDeleteComment} title="Deletar comentário">
               {' '}
               {/* 1 -  - Ao clicar executa a função */} <Trash size={22} />

@@ -1,7 +1,6 @@
 import styles from './App.module.css';
 import './global.css';
 import { Header } from './components/Header';
-import { Sidebar } from './components/Sidebar';
 import { Post, Posts } from './components/Post';
 
 // author: {avatar_url: '', name: '', role: ''}
@@ -30,27 +29,6 @@ const posts: Posts[] = [
     ] as const,
     publishedAt: new Date(Date.now() - 60 * 60 * 1000),
   },
-  {
-    id: 2,
-    author: {
-      avatarUrl: 'https://github.com/cannyster.png',
-      name: 'Jhonanthan',
-      role: 'Desenvolvedor Full Stack',
-    },
-    content: [
-      { type: 'paragraph', content: 'Iai Pessoal 👋' },
-      {
-        type: 'paragraph',
-        content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz',
-      },
-      {
-        type: 'paragraph',
-        content: 'no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀 👉',
-      },
-      { type: 'link', content: 'jane.design/doctorcare' },
-    ] as const,
-    publishedAt: new Date(Date.now() - 120 * 60 * 1000),
-  },
 ];
 
 export function App() {
@@ -58,7 +36,6 @@ export function App() {
     <div>
       <Header />
       <div className={styles.wrapper}>
-        <Sidebar />
         <main>
           {posts.map(post => {
             return (

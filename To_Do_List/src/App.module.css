@@ -1,0 +1,15 @@
+.wrapper {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr; /*grid para algo ter tamanho flexivel*/ /*Grid com duas colunas uma de 256px e outra de 1fr*/
+  gap: 2rem;
+  align-items: center;
+  align-content: center;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 85%;
+    line-height: 1.3;
+  }
+}

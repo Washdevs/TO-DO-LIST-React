@@ -1,6 +1,5 @@
 import styles from './Post.module.css';
 import { Coment } from './Coment';
-import { Avatar } from './Avatar';
 import { format, formatDistanceToNow } from 'date-fns';
 import { ptBR } from 'date-fns/locale/pt-BR';
 import { useState, InvalidEvent, ChangeEvent, FormEvent } from 'react';
@@ -95,7 +94,6 @@ export function Post({ post }: PostProps) {
     <article className={styles.post}>
       <header className={styles.head}>
         <div className={styles.author}>
-          <Avatar src={post.author.avatarUrl} />
           <div className={styles.authorInfo}>
             <strong>{post.author.name}</strong>
             <span>{post.author.role}</span>
