@@ -60,22 +60,6 @@ export function Post({ post }: PostProps) {
 
   return (
     <article className={styles.post}>
-      <div className={styles.content}>
-        {post.content.map(line => {
-          if (line.type === 'paragraph') {
-            return <p key={line.content}>{line.content}</p>;
-          }
-          if (line.type === 'link') {
-            return (
-              <p key={line.content}>
-                <a href="#">{line.content}</a>
-              </p>
-            );
-          } else {
-            return <p>Erro ao retornar Valores</p>;
-          }
-        })}
-      </div>
       <form onSubmit={handlleCreateNewComment} className={styles.commentForm}>
 
         <textarea

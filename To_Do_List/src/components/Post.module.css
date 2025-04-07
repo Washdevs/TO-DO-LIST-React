@@ -1,35 +1,13 @@
 .post {
   background: var(--gray-400);
   color: var(--zinc-100);
-  padding: 2.5rem;
-}
-
-.content {
-  text-decoration: none;
-  color: var(--zinc-200);
-}
-
-.content p {
-  margin-top: 1rem;
-  line-height: 1rem;
-}
-
-.content a {
-  font-weight: bold;
-  color: var(--blue);
-  text-decoration: none;
-  transition: color 0.2s, background-color 0.2s;
-}
-
-.content a:hover {
-  color: var(--blue-dark);
+  padding: 0rem 2rem 0rem;
 }
 
 .commentForm {
   display: flex;
-  border-top: 1px solid var(--gray-600);
-  margin-top: 1.5rem;
-  padding: 1rem 0rem 0rem;
+  margin-top: 0rem;
+  padding: 1rem 0rem 1rem;
   justify-content: center;
   align-items: center;
   align-content: center;
