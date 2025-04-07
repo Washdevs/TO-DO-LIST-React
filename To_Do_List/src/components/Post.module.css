@@ -1,6 +1,5 @@
 .post {
   background: var(--gray-400);
-  overflow: hidden;
   color: var(--zinc-100);
   padding: 2.5rem;
 }

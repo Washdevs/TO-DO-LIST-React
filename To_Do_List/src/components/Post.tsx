@@ -1,53 +1,42 @@
 import styles from './Post.module.css';
 import { Coment } from './Coment';
-import { format, formatDistanceToNow } from 'date-fns';
-import { ptBR } from 'date-fns/locale/pt-BR';
 import { useState, InvalidEvent, ChangeEvent, FormEvent } from 'react';
 
-interface Author {
-  avatarUrl: string;
-  name: string;
-  role: string;
-} //Trazendo os tipos das propriedades de Author dentro de uma Interface
+// interface Author {
+//   avatarUrl: string;
+//   name: string;
+//   role: string;
+// } //Trazendo os tipos das propriedades de Author dentro de uma Interface
 
-interface Content {
-  //Teve que criar uma interface pois o Content no App.tsx é um array com type e content
-  type: 'paragraph' | 'link';
-  content: string;
-}
+// interface Content {
+//   //Teve que criar uma interface pois o Content no App.tsx é um array com type e content
+//   type: 'paragraph' | 'link';
+//   content: string;
+// }
 
-export interface Posts {
-  //Interface contendo as propriedades e os Tipos de cada Propriedade
+// export interface Posts {
+//   //Interface contendo as propriedades e os Tipos de cada Propriedade
+//   id: number;
+//   author: Author;
+//   publishedAt: Date;
+//   content: readonly Content[]; //content é um array então ele deve aderir o contrato interface sendo um array
+//   //Readonly para "Leitura apenas" para poder passar valores imutáveis
+// }
+
+interface PostType {
   id: number;
-  author: Author;
-  publishedAt: Date;
-  content: readonly Content[]; //content é um array então ele deve aderir o contrato interface sendo um array
-  //Readonly para "Leitura apenas" para poder passar valores imutáveis
+  author: { name: string; avatarUrl: string; role: string };
+  content: Array<{ type: 'paragraph'; content: string } | { type: 'link'; content: string }>;
 }
+//Esta interface anula o uso das outras 3 Interfaces acima
 
 interface PostProps {
-  post: Posts;
+  post: PostType;
 }
-
-// interface PostType {
-//  id: number;
-//  author: { name: string; avatarUrl: string; role: string };
-//  content: Array<{ type: 'paragraph'; content: string } | { type: 'link'; content: string }>;
-//  publishedAt: Date;
-// }
-// //Esta interface anula o uso das outras 3 Interfaces acima
 
 export function Post({ post }: PostProps) {
   //post contem as regras da interface Posts então pode ser recebido onde chamar o componente Post
   //TIpando as propriedades usando a Interface PostProps
-  const publishedDateFormatted = format(post.publishedAt, "d 'de' LLLL 'às' HH:mm'h'", {
-    locale: ptBR,
-  });
-
-  const publishedDateRelativeNow = formatDistanceToNow(post.publishedAt, {
-    locale: ptBR,
-    addSuffix: true,
-  });
 
   const [comments, setComments] = useState<string[]>([]);
   // Temos um array de comentários que começa com o valor inicial "Top".
@@ -92,22 +81,6 @@ export function Post({ post }: PostProps) {
 
   return (
     <article className={styles.post}>
-      <header className={styles.head}>
-        <div className={styles.author}>
-          <div className={styles.authorInfo}>
-            <strong>{post.author.name}</strong>
-            <span>{post.author.role}</span>
-          </div>
-        </div>
-        <time
-          title={publishedDateFormatted}
-          dateTime={post.publishedAt.toISOString()}
-          className={styles.data}
-        >
-          {publishedDateRelativeNow}
-        </time>
-      </header>
-
       <div className={styles.content}>
         {post.content.map(line => {
           if (line.type === 'paragraph') {
