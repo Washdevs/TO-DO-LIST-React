@@ -1,5 +1,5 @@
 import styles from './Coment.module.css';
-import { ThumbsDown, ThumbsUp, Trash } from '@phosphor-icons/react';
+import { ThumbsUp, Trash } from '@phosphor-icons/react';
 import { useState } from 'react';
 
 interface CommentProps {
@@ -10,14 +10,8 @@ interface CommentProps {
 export function Coment({ content, onDeleteComment }: CommentProps) {
   const [likeCount, setLikeCount] = useState(0);
 
-  const [unlikeCount, setunLikeCount] = useState(0);
-
   function handleClickLike() {
     setLikeCount(likeCount + 1);
-  }
-
-  function handleClickUnLike() {
-    setunLikeCount(unlikeCount + 1);
   }
 
   // onDeleteComment, prop recebida de Post
@@ -32,9 +26,9 @@ export function Coment({ content, onDeleteComment }: CommentProps) {
       <div className={styles.commentBox}>
         <div className={styles.commentContent}>
           <header>
-            <button onClick={handleDeleteComment} title="Deletar comentário">
+            <button onClick={handleDeleteComment} title="Deletar Tarefa">
               {' '}
-              {/* 1 -  - Ao clicar executa a função */} <Trash size={22} />
+            <Trash size={22} />
             </button>
           </header>
 
@@ -44,13 +38,7 @@ export function Coment({ content, onDeleteComment }: CommentProps) {
         <footer>
           <button onClick={handleClickLike}>
             <ThumbsUp />
-            Aplaudir <span>{likeCount}</span>
-          </button>
-          <button onClick={handleClickUnLike}>
-            {' '}
-            {/* Também é possível fazer onClick={() => setunLikeCount(unlikeCount + 1)} pois vai executar uma arrow porém da forma chamando a função é mais legível e não tem diferença nenhuma funcional*/}
-            <ThumbsDown />
-            Desprezar <span>{unlikeCount}</span>
+             <span>{likeCount}</span>
           </button>
         </footer>
       </div>

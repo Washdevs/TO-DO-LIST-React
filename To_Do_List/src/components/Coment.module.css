@@ -6,9 +6,6 @@
 
 .commentBox {
   flex: 1;
-}
-
-.commentContent {
   background: var(--gray-600);
   border-radius: 8px;
   padding: 1rem;
@@ -21,28 +18,14 @@
 
 .commentContent header {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-.authorAndTime strong {
-  display: block;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: var(--gray-100);
-}
-
-.authorAndTime Time {
-  display: block;
-  font-size: 0.75rem;
-  line-height: 1.6;
-  color: var(--gray-400);
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .commentContent header button {
   background: transparent;
   border: 0;
-  color: var(--gray-400);
+  color: var(--gray-300);
   cursor: pointer;
   line-height: 0;
   border-radius: 2px;

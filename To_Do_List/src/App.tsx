@@ -1,20 +1,13 @@
 import styles from './App.module.css';
 import './global.css';
 import { Header } from './components/Header';
-import { Post, Posts } from './components/Post';
+import { Post, PostProps } from './components/Post';
+//Componente e a interface exportada
 
-// author: {avatar_url: '', name: '', role: ''}
-// content: String
-// publishedAt: Date
-
-const posts: Posts[] = [
+const posts: PostProps['post'][] = [
+//Entre array a prop da interface exportada
   {
     id: 1,
-    author: {
-      avatarUrl: 'https://github.com/Washdevs.png',
-      name: 'Washington',
-      role: 'Suporte de TI',
-    },
     content: [
       { type: 'paragraph', content: 'Iai Pessoal 👋' },
       {
@@ -27,7 +20,6 @@ const posts: Posts[] = [
       },
       { type: 'link', content: '👉 jane.design/doctorcare' },
     ] as const,
-    publishedAt: new Date(Date.now() - 60 * 60 * 1000),
   },
 ];
 

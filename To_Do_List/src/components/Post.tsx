@@ -1,36 +1,15 @@
 import styles from './Post.module.css';
 import { Coment } from './Coment';
 import { useState, InvalidEvent, ChangeEvent, FormEvent } from 'react';
-
-// interface Author {
-//   avatarUrl: string;
-//   name: string;
-//   role: string;
-// } //Trazendo os tipos das propriedades de Author dentro de uma Interface
-
-// interface Content {
-//   //Teve que criar uma interface pois o Content no App.tsx é um array com type e content
-//   type: 'paragraph' | 'link';
-//   content: string;
-// }
-
-// export interface Posts {
-//   //Interface contendo as propriedades e os Tipos de cada Propriedade
-//   id: number;
-//   author: Author;
-//   publishedAt: Date;
-//   content: readonly Content[]; //content é um array então ele deve aderir o contrato interface sendo um array
-//   //Readonly para "Leitura apenas" para poder passar valores imutáveis
-// }
+import { PlusCircle } from '@phosphor-icons/react';
 
 interface PostType {
   id: number;
-  author: { name: string; avatarUrl: string; role: string };
   content: Array<{ type: 'paragraph'; content: string } | { type: 'link'; content: string }>;
 }
-//Esta interface anula o uso das outras 3 Interfaces acima
+//Esta interface anula o uso das outras 3 Interfaces
 
-interface PostProps {
+export interface PostProps {
   post: PostType;
 }
 
@@ -98,25 +77,21 @@ export function Post({ post }: PostProps) {
         })}
       </div>
       <form onSubmit={handlleCreateNewComment} className={styles.commentForm}>
-        <strong>Deixe seu Feedback</strong>
 
         <textarea
           name="textArea"
-          placeholder="Deixe seu Feedback aqui"
+          placeholder="Adcione uma nova tarefa"
           value={newCommentText}
           onChange={handlleCreateNewCommentChange}
           onInvalid={handleNewCommentInvalid}
           required // por padrão é true então para ser false por padrão deve ter ={false} Não vai permitir enviar o formulário sem valor
         />
-
-        <footer>
           <button type="submit" disabled={NovoComentarioVazio}>
             {' '}
             {/* Boa pratica para manutanção*/}{' '}
             {/* Botão fica desabilitado se não tiver valor na variável NovoComentarioVazio*/}{' '}
-            Comentar
+            Criar <PlusCircle />
           </button>
-        </footer>
       </form>
 
       <div className={styles.commentList}>
