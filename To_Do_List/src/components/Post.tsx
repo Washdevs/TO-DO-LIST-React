@@ -13,7 +13,7 @@ export interface PostProps {
   post: PostType;
 }
 
-export function Post({ post }: PostProps) {
+export function Post() {
   //post contem as regras da interface Posts então pode ser recebido onde chamar o componente Post
   //TIpando as propriedades usando a Interface PostProps
 

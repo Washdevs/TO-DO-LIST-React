@@ -1,27 +1,28 @@
 .post {
   background: var(--gray-400);
   color: var(--zinc-100);
-  padding: 0rem 2rem 0rem;
+  padding: 0rem 0rem 0rem;
 }
 
 .commentForm {
   display: flex;
   margin-top: 0rem;
-  padding: 1rem 0rem 1rem;
+  padding: 0rem 0rem 0rem;
   justify-content: center;
   align-items: center;
   align-content: center;
+  background-color: var(--gray-600);
 }
 .commentForm > strong {
   display: block;
   padding-bottom: 1rem;
 }
 .commentForm textarea {
-  border: 2px solid var(--gray-700);
+  border: 2px solid var(--gray-600);
   border-radius: 8px;
   width: 46rem;
   height: 4rem;
-  background: var(--gray-600);
+  background: var(--gray-400);
   color: var(--gray-100);
   padding: 0rem 1rem 0rem;
   resize: none;
@@ -39,12 +40,12 @@
 }
 
 .commentForm button[type='submit'] {
-  border: 2px solid var(--blue);
+  border: 2px solid var(--blue-dark);
   border-radius: 8px;
   margin: 0rem 1rem 0rem; /*cima, laterais, baixo*/
   padding: 0.875rem 0.875rem 0.875rem; /*cima, laterais, baixo*/
-  background: var(--blue-500);
-  color: var(--white);
+  background: var(--blue-dark);
+  color: var(--gray-100);
   transition: color 0.2s, background-color 0.2s;
   align-items: center;
   display: flex;
@@ -68,5 +69,5 @@
 }
 
 .commentList {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }

@@ -1,6 +1,6 @@
 import styles from './Coment.module.css';
-import { ThumbsUp, Trash } from '@phosphor-icons/react';
-import { useState } from 'react';
+import { Trash } from '@phosphor-icons/react';
+// import { useState } from 'react';
 
 interface CommentProps {
   content: string;
@@ -8,11 +8,6 @@ interface CommentProps {
 }
 
 export function Coment({ content, onDeleteComment }: CommentProps) {
-  const [likeCount, setLikeCount] = useState(0);
-
-  function handleClickLike() {
-    setLikeCount(likeCount + 1);
-  }
 
   // onDeleteComment, prop recebida de Post
   //
@@ -36,10 +31,8 @@ export function Coment({ content, onDeleteComment }: CommentProps) {
         </div>
 
         <footer>
-          <button onClick={handleClickLike}>
-            <ThumbsUp />
-             <span>{likeCount}</span>
-          </button>
+          <input type='checkbox'>
+          </input>
         </footer>
       </div>
     </div>
