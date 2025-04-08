@@ -46,7 +46,7 @@
   border: 2px solid var(--blue-dark);
   border-radius: 8px;
   margin: -2rem 1rem 0rem; /*cima, laterais, baixo*/
-  padding: 0.875rem 0.875rem 0.875rem; /*cima, laterais, baixo*/
+  padding: 1.175rem 0.875rem 0.875rem; /*cima, laterais, baixo*/
   background: var(--blue-dark);
   color: var(--gray-100);
   transition: color 0.2s, background-color 0.2s;
