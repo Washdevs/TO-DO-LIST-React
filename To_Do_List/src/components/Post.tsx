@@ -2,6 +2,7 @@ import styles from './Post.module.css';
 import { Coment } from './Coment';
 import { useState, InvalidEvent, ChangeEvent, FormEvent } from 'react';
 import { PlusCircle } from '@phosphor-icons/react';
+import { Vazio } from './Vazio';
 
 export interface PostType {
   id: number;

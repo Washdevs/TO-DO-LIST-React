@@ -1,14 +1,12 @@
 import styles from './Vazio.module.css';
-// import { useState } from 'react';
+import { ClipboardText } from '@phosphor-icons/react';
 
 export function Vazio() {
   return (
-    <article className={styles.post}>
-      <div className={styles.commentList}>
-        {comments.map(comment => {
-          return <Coment key={comment} content={comment} onDeleteComment={deleteComment} />;
-        })}
-      </div>
-    </article>
+    <div className={styles.Vazio}>
+      <p className={styles.icone}>{ClipboardText}</p>
+      <p className={styles.texto1}>Você ainda não tem tarefas cadastradas</p>
+      <p className={styles.texto2}>Crie tarefas e organize seus itens a fazer</p>
+    </div>
   );
 }
