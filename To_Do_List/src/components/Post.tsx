@@ -3,11 +3,10 @@ import { Coment } from './Coment';
 import { useState, InvalidEvent, ChangeEvent, FormEvent } from 'react';
 import { PlusCircle } from '@phosphor-icons/react';
 
-interface PostType {
+export interface PostType {
   id: number;
-  content: Array<{ type: 'paragraph'; content: string } | { type: 'link'; content: string }>;
+  content: string;
 }
-//Esta interface anula o uso das outras 3 Interfaces
 
 export interface PostProps {
   post: PostType;
@@ -42,9 +41,8 @@ export function Post() {
   const NovoComentarioVazio = newCommentText.length === 0;
 
   return (
-    <article className={styles.post}>
+    <div className={styles.post}>
       <form onSubmit={handlleCreateNewComment} className={styles.commentForm}>
-
         <textarea
           name="textArea"
           placeholder="Adcione uma nova tarefa"
@@ -53,20 +51,16 @@ export function Post() {
           onInvalid={handleNewCommentInvalid}
           required
         />
-          <button type="submit" disabled={NovoComentarioVazio}>
-            Criar <PlusCircle />
-          </button>
+        <button type="submit" disabled={NovoComentarioVazio}>
+          Criar <PlusCircle />
+        </button>
       </form>
-
-      <div className={styles.commentList}>
-
-      </div>
 
       <div className={styles.commentList}>
         {comments.map(comment => {
           return <Coment key={comment} content={comment} onDeleteComment={deleteComment} />;
         })}
       </div>
-    </article>
+    </div>
   );
 }

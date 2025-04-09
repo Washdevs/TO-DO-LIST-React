@@ -29,7 +29,6 @@
   resize: none;
   align-content: center;
   margin-top: -2rem;
-
 }
 
 /* .commentForm footer {
@@ -49,15 +48,16 @@
   padding: 1.175rem 0.875rem 0.875rem; /*cima, laterais, baixo*/
   background: var(--blue-dark);
   color: var(--gray-100);
-  transition: color 0.2s, background-color 0.2s;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
   align-items: center;
   display: flex;
-  gap: 5px
+  gap: 5px;
 }
 
 .commentForm button[type='submit']:not(:disabled):hover {
   background: var(--blue);
   color: var(--gray-100);
+  border: 2px solid var(--blue);
 }
 
 .commentForm button:disabled {

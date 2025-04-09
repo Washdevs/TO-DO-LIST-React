@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styles from './Coment.module.css';
 import { Trash } from '@phosphor-icons/react';
 // import { useState } from 'react';
@@ -8,32 +9,41 @@ interface CommentProps {
 }
 
 export function Coment({ content, onDeleteComment }: CommentProps) {
-
+  const [checkvalue, setCheckvalue] = useState(false);
   // onDeleteComment, prop recebida de Post
   //
   function handleDeleteComment() {
     // 2 - a função recebo o conteúdo e passa para a função deleteComment, que deleta o Conteúdo
     onDeleteComment(content);
   }
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setCheckvalue(event.target.checked);
+  };
 
   return (
     <div className={styles.comment}>
       <div className={styles.commentBox}>
         <div className={styles.commentContent}>
           <header>
+            <input
+              type="checkbox"
+              checked={checkvalue}
+              onChange={handleChange}
+              title={checkvalue ? 'Tarefa Concluída' : 'Marcar como Concluída'}
+            ></input>
             <button onClick={handleDeleteComment} title="Deletar Tarefa">
               {' '}
-            <Trash size={22} />
+              <Trash size={22} />
             </button>
           </header>
-
-          <p>{content}</p>
+          <p
+            style={{
+              textDecoration: checkvalue ? 'line-through' : 'none',
+            }}
+          >
+            {content}
+          </p>
         </div>
-
-        <footer>
-          <input type='checkbox'>
-          </input>
-        </footer>
       </div>
     </div>
   );

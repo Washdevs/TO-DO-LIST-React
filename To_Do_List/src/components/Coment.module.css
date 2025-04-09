@@ -7,7 +7,7 @@
 }
 
 .commentBox {
-  display: flex;
+  display: block;
   background: var(--gray-400);
   border-radius: 8px;
   padding: 0.875rem;
@@ -23,7 +23,8 @@
 .commentContent header {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .commentContent header button {
@@ -33,6 +34,22 @@
   cursor: pointer;
   line-height: 0;
   border-radius: 2px;
+}
+
+.commentContent header input[type='checkbox'] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--gray-300);
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.commentContent header input[type='checkbox']:checked {
+  background: var(--blue);
+  background-color: antiquewhite;
 }
 
 .commentContent header button:hover {
