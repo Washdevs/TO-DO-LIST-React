@@ -3,6 +3,7 @@ import { Coment } from './Coment';
 import { useState, InvalidEvent, ChangeEvent, FormEvent } from 'react';
 import { PlusCircle } from '@phosphor-icons/react';
 import { Vazio } from './Vazio';
+import { Contador } from './Contadores';
 
 export interface PostType {
   id: number;
@@ -57,10 +58,22 @@ export function Post() {
         </button>
       </form>
 
-      <div className={styles.commentList}>
-        {comments.map(comment => {
-          return <Coment key={comment} content={comment} onDeleteComment={deleteComment} />;
-        })}
+      <div className={styles.contadores}>
+        <Contador />
+      </div>
+
+      <div className={styles.listvazia}>
+        {comments.length === 0 ? (
+          <div className={styles.vazio}>
+            <Vazio />
+          </div>
+        ) : (
+          <div className={styles.commentList}>
+            {comments.map(comment => (
+              <Coment key={comment} content={comment} onDeleteComment={deleteComment} />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

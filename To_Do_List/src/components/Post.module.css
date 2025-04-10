@@ -74,3 +74,16 @@
 .commentList {
   margin-top: 1.5rem;
 }
+
+.listvazia {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.contadores {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}

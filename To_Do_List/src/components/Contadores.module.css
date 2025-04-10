@@ -1,0 +1,20 @@
+.contPrincipal {
+  display: grid;
+  align-items: center;
+  width: 52.875rem;
+  margin: 1rem 0.5rem 0 -0.5rem;
+}
+
+.contModulo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tfCriadas {
+  color: aqua;
+}
+
+.tfConcluidas {
+  color: rgb(105, 54, 24);
+}
