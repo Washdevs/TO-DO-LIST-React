@@ -59,7 +59,7 @@ export function Post() {
       </form>
 
       <div className={styles.contadores}>
-        <Contador />
+        <Contador total={comments.length} />
       </div>
 
       <div className={styles.listvazia}>

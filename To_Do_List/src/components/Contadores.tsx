@@ -1,11 +1,18 @@
 import styles from './Contadores.module.css';
 
-export function Contador() {
+interface ContadorProps {
+  concluidas: number;
+  total: number;
+}
+
+export function Contador({ concluidas, total }: ContadorProps) {
   return (
     <div className={styles.contPrincipal}>
       <div className={styles.contModulo}>
-        <p className={styles.tfCriadas}>Tarefas Criada, valor</p>
-        <p className={styles.tfConcluidas}>Concluídas, valor</p>
+        <p className={styles.tfCriadas}>
+          Tarefas Criadas <p className={styles.contTotal}>{total}</p>
+        </p>
+        <p className={styles.tfConcluidas}>Concluídas {concluidas}</p>
       </div>
     </div>
   );

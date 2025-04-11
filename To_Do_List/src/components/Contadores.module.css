@@ -12,9 +12,29 @@
 }
 
 .tfCriadas {
-  color: aqua;
+  color: var(--blue);
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+}
+
+.contTotal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.775rem;
+  width: 2.5rem;
+  height: 1.5rem;
+  color: var(--gray-100);
+  background-color: var(--gray-500);
+  border-radius: 18px;
 }
 
 .tfConcluidas {
-  color: rgb(105, 54, 24);
+  color: var(--purple);
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  display: flex;
 }
