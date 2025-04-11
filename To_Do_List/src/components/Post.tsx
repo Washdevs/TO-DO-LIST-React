@@ -17,6 +17,7 @@ export interface PostProps {
 export function Post() {
   const [comments, setComments] = useState<string[]>([]);
   const [newCommentText, setNewCommentText] = useState('');
+  const [concluidas,setConcluidas] = useState(0);
 
   function handlleCreateNewCommentChange(event: ChangeEvent<HTMLTextAreaElement>) {
     event.target.setCustomValidity('');
@@ -27,6 +28,13 @@ export function Post() {
     event.preventDefault();
     setComments([...comments, newCommentText]);
     setNewCommentText('');
+  }
+  function handleConclusaoChange (state:boolean) {
+    if(!state){
+      setConcluidas(concluidas + 1);
+    } else {
+      setConcluidas(concluidas - 1);
+    }
   }
 
   function deleteComment(commentToDelete: string) {
@@ -59,7 +67,7 @@ export function Post() {
       </form>
 
       <div className={styles.contadores}>
-        <Contador total={comments.length} />
+        <Contador concluidas={concluidas}  total={comments.length} />
       </div>
 
       <div className={styles.listvazia}>
@@ -70,7 +78,7 @@ export function Post() {
         ) : (
           <div className={styles.commentList}>
             {comments.map(comment => (
-              <Coment key={comment} content={comment} onDeleteComment={deleteComment} />
+              <Coment key={comment} content={comment} onDeleteComment={deleteComment} onSetConcluida={handleConclusaoChange}/>
             ))}
           </div>
         )}

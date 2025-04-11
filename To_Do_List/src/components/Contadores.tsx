@@ -1,8 +1,8 @@
 import styles from './Contadores.module.css';
 
 interface ContadorProps {
-  concluidas: number;
-  total: number;
+  concluidas?: number;
+  total?: number;
 }
 
 export function Contador({ concluidas, total }: ContadorProps) {

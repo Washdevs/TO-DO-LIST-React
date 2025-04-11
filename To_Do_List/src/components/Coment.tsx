@@ -5,10 +5,11 @@ import { Trash } from '@phosphor-icons/react';
 
 interface CommentProps {
   content: string;
+  onSetConcluida: (value: any) => void;
   onDeleteComment: (comment: string) => void; // isto é como se tipa uma função, falamos que tem um parametro, nome qualquer  falando o tipo, e se não tem retorno é void nesta sintaxe de arrow Function
 }
 
-export function Coment({ content, onDeleteComment }: CommentProps) {
+export function Coment({ content, onDeleteComment, onSetConcluida,  }: CommentProps) {
   const [checkvalue, setCheckvalue] = useState(false);
   // onDeleteComment, prop recebida de Post
   //
@@ -18,6 +19,7 @@ export function Coment({ content, onDeleteComment }: CommentProps) {
   }
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setCheckvalue(event.target.checked);
+    onSetConcluida(checkvalue);
   };
 
   return (
