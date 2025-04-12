@@ -1,5 +1,5 @@
 📝 Desafio
-#ToDo List em React
+# ToDo List em React
 
 Este projeto é uma Lista de Tarefas desenvolvida durante a primeira seção da Trilha ReactJS da Rocketseat, como parte do desafio prático proposto no curso.
 
