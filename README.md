@@ -1,4 +1,5 @@
-#📝 ToDo List em React
+📝 ToDo List em React
+# Desafio
 
 Este projeto é uma Lista de Tarefas desenvolvida durante a primeira seção da Trilha ReactJS da Rocketseat, como parte do desafio prático proposto no curso.
 
@@ -23,7 +24,7 @@ Vite (para scaffolding e dev server)
 CSS Modules (para estilização dos componentes)
 Phosphor Icons
 
-#📚 Conceitos Aplicados
+📚 Conceitos Aplicados
 Componentização
 Estados com useState
 Manipulação de eventos
