@@ -31,6 +31,18 @@
   border-radius: 18px;
 }
 
+.contConcl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.775rem;
+  width: 5rem;
+  height: 1.5rem;
+  color: var(--gray-100);
+  background-color: var(--gray-500);
+  border-radius: 18px;
+}
+
 .tfConcluidas {
   color: var(--purple);
   align-items: center;
