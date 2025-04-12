@@ -1,7 +1,9 @@
-📝 ToDo List em React
+#📝 ToDo List em React
+
 Este projeto é uma Lista de Tarefas desenvolvida durante a primeira seção da Trilha ReactJS da Rocketseat, como parte do desafio prático proposto no curso.
 
 🎯 Objetivo
+
 Colocar em prática os conceitos aprendidos nas 6 horas de curso em vídeo, desenvolvendo uma aplicação funcional a partir de um layout no Figma e seguindo as boas práticas recomendadas pela Rocketseat.
 
 💡 Funcionalidades
@@ -21,7 +23,7 @@ Vite (para scaffolding e dev server)
 CSS Modules (para estilização dos componentes)
 Phosphor Icons
 
-📚 Conceitos Aplicados
+#📚 Conceitos Aplicados
 Componentização
 Estados com useState
 Manipulação de eventos
